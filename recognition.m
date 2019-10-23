@@ -12,7 +12,7 @@ function recognition()
 
   % N is the number of images in the input directory
   N = rows(ls(in_path));
-  for i = 1 : 6
+  for i = 1 : N
     image_path = strcat(in_path,'/',int2str(i),'.jpg');
     
     [min_dist output_img_index] = face_recognition(image_path, m, A, eigenfaces, pr_img);
